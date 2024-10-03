@@ -10,7 +10,6 @@ public interface TrainingCenterService {
     //get All training Centers
     List<TrainingCenterDto> getAllTrainingCenters();
 
-    //get All trining centers from same city
-
+    //get All training centers from given city
     List<TrainingCenterDto> getTrainingCentersFromCity(String city);
 }

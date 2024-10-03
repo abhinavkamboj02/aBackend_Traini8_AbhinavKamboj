@@ -21,12 +21,14 @@ public class TrainingCenterController {
         TrainingCenterDto savedTrainingCenterDto = trainingCenterService.createTrainingCenter(trainingCenterDto);
         return new ResponseEntity<>(savedTrainingCenterDto, HttpStatus.CREATED);
     }
+
     //fetch all training centers from database
     @GetMapping("/get-all")
     public ResponseEntity<List<TrainingCenterDto>> getAllTrainingCenters(){
         List<TrainingCenterDto> trainingCenterDtoList = trainingCenterService.getAllTrainingCenters();
         return new ResponseEntity<>(trainingCenterDtoList, HttpStatus.OK);
     }
+
     // fetch all training center which are in given city (additional api)
     @GetMapping("/city")
     public ResponseEntity<List<TrainingCenterDto>> getTrainingCentersFromCity(@RequestParam String city){
